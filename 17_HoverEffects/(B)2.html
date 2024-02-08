@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            /* background-color: transparent; */
+            width: 400px;
+            height: 400px;
+            /* border: 1px solid black; */
+            perspective: 1000px;
+            margin: auto;
+        }
+
+        .flipbox {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        img {
+            width: 400px;
+            height: 400px;
+        }
+
+        .main:hover .flipbox {
+            transform: rotateX(180deg);
+        }
+
+        .front {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .back {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            background-color: orangered;
+            color: white;
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="flipbox">
+            <div class="front">
+                <img src="https://indianmemetemplates.com/wp-content/uploads/Unhappy-Doge.jpg" alt="">
+            </div>
+            <div class="back">
+                <h1>Flip Image</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum laborum blanditiis voluptates aperiam
+                    quod voluptatem voluptate? Minima, deleniti dolore, blanditiis, voluptatibus cupiditate quae
+                    possimus perspiciatis tempore recusandae inventore in expedita?</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
